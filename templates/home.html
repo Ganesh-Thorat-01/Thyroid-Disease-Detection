@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thyroid Disease Prediction</title>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/jpg" href="static/images/banner_1.png"/>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="mainheader">
+
+            <nav class="nav">
+                <div class="container">
+                    <div class="logo">
+                        <img src="static/images/banner_1.png">
+                    </div>
+                    <div id="mainListDiv" class="main_list">
+                        <ul class="navlinks">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="https://ganeshthorat.herokuapp.com" target="_blank">Portfolio</a></li>
+                            <li><a href="mailto: thorat.ganeshscoe@gmail.com" target="_blank">Contact</a></li>
+                        </ul>
+                    </div>
+                    <span class="navTrigger">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </span>
+                </div>
+            </nav>
+
+        </div>
+
+        <main>
+            <section class="left-sec">
+                <h2> We Are Here For Your Care</h2>
+                <h1>Thyroid Disease Prediction</h1>
+                <p>Your thyroid creates and produces hormones play a role in many
+                    different systems throughout your body. When your thyroid makes
+                    either too much or too little of these important hormones, it’s
+                    called a thyroid disease.There are several different types of
+                    disease, including hyperthyroidism, hypothyroidism, thyroiditis
+                    Hashimoto’s thyroiditis.</p>
+                <div>
+                    <a href="/predict"><span></span>PREDICT</a>
+                    <a href="/moreinfo"><span></span>MORE INFO</a>
+                </div>
+            </section>
+
+            <section class="right-sec">
+                <figure>
+                    <img src="static/images/banner_img.png">
+                </figure>
+            </section>
+        </main>
+    </header>
+    <section id="footer">
+        <div class="social-links">
+            <a href="https://github.com/Ganesh-Thorat-01" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="mailto:thorat.ganeshscoe@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+            <a href="https://www.instagram.com/ganesh_thorat__/" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="https://twitter.com/Ganesh_Thorat_" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.youtube.com/channel/UCXhvVTaw3a8onPxwv2TbwUw" target="_blank"><i class="fa fa-youtube-play"></i></a>
+            <p>&copy; Copyright 2022 Ganesh Thorat</p>
+
+        </div>
+    </section>
+
+    <!-- Jquery needed -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="static/js/main.js"></script>
+
+<!-- Function used to shrink nav bar removing paddings and adding black background -->
+    <script>
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+    </script>
+</body>
+
+</html>

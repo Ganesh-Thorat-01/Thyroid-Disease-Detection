@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Ganesh Thorat">
+    <meta name="keywords" content="Thyroid Disease Prediction">
+
+    <!-- Title Page-->
+    <title>Predict</title>
+
+    <!-- Icons font CSS-->
+    <link rel="shortcut icon" type="image/jpg" href="static/images/banner_1.png" />
+    <link href="static/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="static/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="static/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="static/vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="static/css/main.css" rel="stylesheet" media="all">
+    <link href="static/css/predict.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+        <div class="wrapper wrapper--w790">
+            <div class="card card-5">
+                <div class="card-heading">
+                    <h2 class="title">Prediction Form</h2>
+                </div>
+                <div class="card-body">
+                    <form action="/predictresult" method="POST">
+                        <div class="form-row">
+                            <div class="name">Age</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="number" name="age" min="1" max="100" placeholder="Age" required="required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Sex</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="sex" required="required">
+                                            <option>Male</option>
+                                            <option>Female</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Thyroid stimulating hormone level</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="number" name="TSH" min="0.4" max="24.0" placeholder="0.4 to 24.0 mlU/L" required="required" step="any">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Total Thyroxine TT4</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="number" name="TT4" min="20" max="150" placeholder="20-150" required="required" step="any">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Free Thyroxine Index</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="number" name="FTI" min="20" max="160" placeholder="20-160" required="required" step="any">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">On Thyroxine Medication</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="on_thyroxine" required="required">
+                                            <option>True</option>
+                                            <option>False</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">On Antithyroid Medication</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="on_antithyroid_medication" required="required">
+                                            <option>True</option>
+                                            <option>False</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Goitre</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="goitre" required="required">
+                                            <option>True</option>
+                                            <option>False</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Hypopituitary</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="hypopituitary" required="required">
+                                            <option>True</option>
+                                            <option>False</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Psychological Symptoms</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="psych" required="required">
+                                            <option>True</option>
+                                            <option>False</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">T3 Measured</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="T3_measured" required="required">
+                                            <option>True</option>
+                                            <option>False</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn--radius-2 btn--red" type="submit">Predict</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="footer">
+        <div class="social-links">
+            <a href="https://github.com/Ganesh-Thorat-01" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="mailto:thorat.ganeshscoe@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+            <a href="https://www.instagram.com/ganesh_thorat__/" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="https://twitter.com/Ganesh_Thorat_" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.youtube.com/channel/UCXhvVTaw3a8onPxwv2TbwUw" target="_blank"><i class="fa fa-youtube-play"></i></a>
+            <p>&copy; Copyright 2022 Ganesh Thorat</p>
+        </div>
+    </section>
+
+    <!-- Jquery JS-->
+    <script src="static/vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="static/vendor/select2/select2.min.js"></script>
+    <script src="static/vendor/datepicker/moment.min.js"></script>
+    <script src="static/vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="static/js/global.js"></script>
+
+</body>
+
+</html>
+<!-- end document-->

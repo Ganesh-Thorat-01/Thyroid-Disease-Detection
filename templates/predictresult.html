@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="shortcut icon" type="image/jpg" href="static/images/banner_1.png" />
+    <link rel="stylesheet" type="text/css" href="static/css/predictresult.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <br><br><br><br><br><br>
+    <section class="result"></section>
+    {% if output is defined and output|length %}
+    <div class="col-md-12 text-center">
+        <h2>{{ output }}</h2>
+    </div>
+    <br>
+    {% else %}
+    <br>
+    {% endif %}
+    </section>
+
+    <div class="Btn">
+        <a href="/"><span></span>Home</a>
+        <a href="/predict"><span></span>PREDICT</a>
+        <a href="/moreinfo"><span></span>MORE INFO</a>
+    </div>
+
+    <section id="footer">
+        <div class="social-links">
+            <a href="https://github.com/Ganesh-Thorat-01" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="mailto:thorat.ganeshscoe@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+            <a href="https://www.instagram.com/ganesh_thorat__/" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="https://twitter.com/Ganesh_Thorat_" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.youtube.com/channel/UCXhvVTaw3a8onPxwv2TbwUw" target="_blank"><i class="fa fa-youtube-play"></i></a>
+            <p>&copy; Copyright 2022 Ganesh Thorat</p>
+
+        </div>
+    </section>
+</body>
+
+</html>
