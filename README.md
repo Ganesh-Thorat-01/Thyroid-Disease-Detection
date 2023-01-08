@@ -72,7 +72,6 @@ Start the server
 # Authors
 
 - [@Ganesh-Thorat-01](https://github.com/Ganesh-Thorat-01/)
-- [@SejalKathed](https://github.com/SejalKathed)
 
 # Feedback
 
